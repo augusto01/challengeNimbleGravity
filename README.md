@@ -16,13 +16,13 @@ Enlace: https://github.com/augusto01/challengeNimbleGravity </br>
 ⚙️ Instrucciones de Instalación y Uso
 Siga estos pasos para levantar el proyecto localmente en menos de un minuto:  
 
-1- Clonar el repositorio:
+1- Clonar el repositorio:</br>
   git clone https://github.com/augusto01/challengeNimbleGravity.git  </br>
 
-2- Instalar Dependencias 
+2- Instalar Dependencias</br> 
     npm install  </br>
 
-3- Configurar Variables de Entorno:
+3- Configurar Variables de Entorno:</br>
     Crea un archivo llamado .env en la raíz del proyecto con las siguientes variables (reemplaace los valores por los verdaderos), 
     ejemplo: </br>
     VITE_API_BASE_URL=https://api.ejemplo.com/v1  </br>
