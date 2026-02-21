@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 
+// Este hook se encarga de manejar la lógica de carga de datos relacionados a los empleos disponibles y el perfil del candidato,
+// incluyendo validaciones, manejo de errores detallado y categorización de estados para una mejor experiencia de usuario.
+
 export const useJobs = (email) => {
   const [candidate, setCandidate] = useState(null);
   const [jobs, setJobs] = useState([]);
@@ -8,7 +11,7 @@ export const useJobs = (email) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      // 1. Validación inicial
+      // 1. Validación inicial "sin email no hay nada que cargar", esto evita llamadas innecesarias al backend y mejora la experiencia de usuario al no mostrar estados de carga sin sentido
       if (!email) {
         setLoading(false);
         return;
