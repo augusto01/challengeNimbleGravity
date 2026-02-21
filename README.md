@@ -4,7 +4,7 @@ Candidato: Almirón Pedro Augusto, Full Stack Developer Junior </br>
 📝 Descripción
 Esta Single Page Application (SPA) ha sido diseñada para gestionar de manera eficiente el flujo de postulación de candidatos. La aplicación permite la validación de identidad mediante correo electrónico, la visualización de vacantes disponibles y la postulación formal a través de integraciones con una API REST, ofreciendo una experiencia de usuario fluida y reactiva.</br>
 
-🛠️ Tecnologías Utilizadas
+🛠️ Tecnologías Utilizadas </br>
 -React 18 (Vite): Entorno de desarrollo ultrarrápido y librería base. </br>
 -Hooks Personalizados: Para la separación de la lógica de negocio y el estado de la UI (Clean Code). </br>
 -Fetch API: Gestión de peticiones asíncronas hacia los endpoints de Nimble Gravity. </br>
