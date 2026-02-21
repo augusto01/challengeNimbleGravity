@@ -3,9 +3,7 @@ Nimble Gravity  - Challenge  2026
 Hola soy Augusto Almiron y envio mi challenge de prueba realizado con exito !
 
 📝 Descripción
-Este proyecto es una Single Page Application (SPA) desarrollada para el proceso de selección de Nimble Gravity. La aplicación gestiona el flujo completo de postulación de un candidato, desde la validación de identidad por correo electrónico hasta la aplicación a vacantes específicas mediante una API REST de alta fidelidad.
-
-El sistema se conecta a un backend en Azure para sincronizar perfiles de candidatos y catálogos de empleo en tiempo real, garantizando la integridad de los datos en cada paso del proceso.
+Este proyecto es una Single Page Application (SPA) desarrollada para el proceso de selección de Nimble Gravity. La aplicación gestiona el flujo completo de postulación de un candidato, desde la validación de identidad por correo electrónico hasta la aplicación a vacantes específicas mediante una API REST.
 
 🛠️ Tecnologías Utilizadas
 -React 18 (Vite para el tooling)
