@@ -1,25 +1,33 @@
-Nimble Gravity  - Challenge  2026
-
-Hola soy Augusto Almiron y envio mi challenge de prueba realizado con exito !
+Nimble Gravity - Candidate Selection Challenge 2026 </br>
+Candidato: Almirón Pedro Augusto, Full Stack Developer Junior </br>
 
 📝 Descripción
-Este proyecto es una Single Page Application (SPA) desarrollada para el proceso de selección de Nimble Gravity. La aplicación gestiona el flujo completo de postulación de un candidato, desde la validación de identidad por correo electrónico hasta la aplicación a vacantes específicas mediante una API REST.
+Esta Single Page Application (SPA) ha sido diseñada para gestionar de manera eficiente el flujo de postulación de candidatos. La aplicación permite la validación de identidad mediante correo electrónico, la visualización de vacantes disponibles y la postulación formal a través de integraciones con una API REST, ofreciendo una experiencia de usuario fluida y reactiva.</br>
 
-🛠️ Tecnologías Utilizadas
--React 18 (Vite para el tooling)
--Hooks Personalizados (Lógica de estado y efectos)
--Fetch API (Comunicación asíncrona)
--CSS Moderno (Variables, Flexbox y Grid)
-
-Environment Variables (Gestión de configuración sensible)
+🛠️ Tecnologías Utilizadas </br>
+-React 18 (Vite): Entorno de desarrollo ultrarrápido y librería base. </br>
+-Hooks Personalizados: Para la separación de la lógica de negocio y el estado de la UI (Clean Code). </br>
+-Fetch API: Gestión de peticiones asíncronas hacia los endpoints de Nimble Gravity. </br>
+-CSS Moderno: Diseño responsivo utilizando Variables CSS, Flexbox y Grid Layout. </br>
 
 🚀 Repositorio
-https://github.com/augusto01/challengeNimbleGravity
+Enlace: https://github.com/augusto01/challengeNimbleGravity </br>
 
-⚙️ Configuración del Entorno
-Para ejecutar este proyecto localmente, asegúrate de configurar tu archivo .env:
+⚙️ Instrucciones de Instalación y Uso
+Siga estos pasos para levantar el proyecto localmente en menos de un minuto:  
 
-Fragmento de código
-VITE_API_BASE_URL=https://...
-VITE_CANDIDATE_EMAIL=tu@email.com
-VITE_GITHUB_REPO=https://github.com/tu-usuario/tu-repo
+1- Clonar el repositorio:</br>
+  git clone https://github.com/augusto01/challengeNimbleGravity.git  </br>
+
+2- Instalar Dependencias</br> 
+    npm install  </br>
+
+3- Configurar Variables de Entorno:</br>
+    Crea un archivo llamado .env en la raíz del proyecto con las siguientes variables (reemplaace los valores por los verdaderos), 
+    ejemplo: </br>
+    VITE_API_BASE_URL=https://api.ejemplo.com/v1  </br>
+    VITE_CANDIDATE_EMAIL=tu@email.com  </br>
+    VITE_GITHUB_REPO=https://github.com/augusto01/challengeNimbleGravity  </br>
+    
+4- Ejecutar en modo desarrollador </br>
+    npm run dev 
