@@ -8,13 +8,13 @@ Esta Single Page Application (SPA) ha sido diseñada para gestionar de manera ef
 -React 18 (Vite): Entorno de desarrollo ultrarrápido y librería base. </br>
 -Hooks Personalizados: Para la separación de la lógica de negocio y el estado de la UI (Clean Code). </br>
 -Fetch API: Gestión de peticiones asíncronas hacia los endpoints de Nimble Gravity. </br>
--CSS Moderno: Diseño responsivo utilizando Variables CSS, Flexbox y Grid Layout sin librerías externas para demostrar dominio de estilos puros. </br>
+-CSS Moderno: Diseño responsivo utilizando Variables CSS, Flexbox y Grid Layout. </br>
 
 🚀 Repositorio
 Enlace: https://github.com/augusto01/challengeNimbleGravity </br>
 
 ⚙️ Instrucciones de Instalación y Uso
-Sigue estos pasos para levantar el proyecto localmente en menos de un minuto:  
+Siga estos pasos para levantar el proyecto localmente en menos de un minuto:  
 
 1- Clonar el repositorio:
   git clone https://github.com/augusto01/challengeNimbleGravity.git  </br>
@@ -23,7 +23,7 @@ Sigue estos pasos para levantar el proyecto localmente en menos de un minuto:
     npm install  </br>
 
 3- Configurar Variables de Entorno:
-    Crea un archivo llamado .env en la raíz del proyecto con las siguientes variables (reemplaace los valores por los verdaderos)
+    Crea un archivo llamado .env en la raíz del proyecto con las siguientes variables (reemplaace los valores por los verdaderos), 
     ejemplo: </br>
     VITE_API_BASE_URL=https://api.ejemplo.com/v1  </br>
     VITE_CANDIDATE_EMAIL=tu@email.com  </br>
