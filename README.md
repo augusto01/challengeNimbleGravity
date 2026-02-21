@@ -24,7 +24,7 @@ Sigue estos pasos para levantar el proyecto localmente en menos de un minuto:
 
 3- Configurar Variables de Entorno:
     Crea un archivo llamado .env en la raíz del proyecto con las siguientes variables (reemplaace los valores por los verdaderos)
-    ejemplo:
+    ejemplo: </br>
     VITE_API_BASE_URL=https://api.ejemplo.com/v1  </br>
     VITE_CANDIDATE_EMAIL=tu@email.com  </br>
     VITE_GITHUB_REPO=https://github.com/augusto01/challengeNimbleGravity  </br>
