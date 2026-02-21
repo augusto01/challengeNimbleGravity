@@ -1,42 +1,201 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --bg: #2e1a47;
+  --card-bg: #3d2b4d;
+  --text: #ffffff;
+  --accent: #e68a0b;
+  --border: #4d3b5d;
+  --input-bg: #ffffff;
+  --error: #ff4d4d;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* 1. Reset Base */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background-color: var(--bg);
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* 2. Layout Principal */
+.app-wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.card {
-  padding: 2em;
+.main-content {
+  width: 100%;
+  flex: 1;
+  padding: 120px 40px 60px 40px;
+  box-sizing: border-box;
 }
 
-.read-the-docs {
-  color: #888;
+/* 3. Grid de 3 Columnas */
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+/* 4. Estados Globales (Carga y Error de Env) */
+.state-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg);
+  z-index: 9999;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Loader */
+.minimal-loader {
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--border);
+  border-top: 4px solid var(--accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+.loading-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* 5. Interfaz de Error de Configuración (.env) */
+/* Modificación de la tarjeta de error para darle "colorsitos" y profundidad */
+.error-card {
+  background: linear-gradient(145deg, #3d2b4d, #2d1b3d); /* Gradiente sutil */
+  border: 1px solid var(--accent);
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 550px;
+  width: 100%;
+  box-shadow: 0 0 40px rgba(230, 138, 11, 0.15), 0 20px 50px rgba(0,0,0,0.6);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de luz en la esquina */
+.error-card::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 100px;
+  height: 100px;
+  background: var(--accent);
+  filter: blur(60px);
+  opacity: 0.3;
+}
+
+.error-header .error-icon {
+  font-size: 1.5rem;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(230, 138, 11, 0.5); /* Glow amarillo */
+  animation: pulse-glow 2s infinite;
+}
+
+.var-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 77, 77, 0.05); /* Fondo rojizo muy sutil */
+  padding: 14px 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 77, 77, 0.2);
+  border-left: 5px solid var(--error);
+  transition: transform 0.2s ease;
+}
+
+.var-item:hover {
+  transform: scale(1.02);
+  background: rgba(255, 77, 77, 0.1);
+}
+
+.var-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  color: #ffcccc; /* Texto rosado/rojo suave */
+}
+
+.var-status {
+  background: var(--error);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+/* Animación de pulso para el icono de error */
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 5px rgba(230, 138, 11, 0.4); }
+  50% { box-shadow: 0 0 20px rgba(230, 138, 11, 0.7); }
+  100% { box-shadow: 0 0 5px rgba(230, 138, 11, 0.4); }
+}
+
+/* Estilo para los códigos en el footer del error */
+.error-footer code {
+  color: var(--accent);
+  background: rgba(230, 138, 11, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(230, 138, 11, 0.2);
+}
+
+/* 6. Botones Generales */
+.minimal-btn {
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  transition: opacity 0.2s;
+}
+
+.minimal-btn:hover { opacity: 0.9; }
+
+/* Animaciones */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Responsividad */
+@media (max-width: 1200px) {
+  .job-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .job-grid { grid-template-columns: 1fr; }
+  .main-content { padding: 100px 20px; }
+  .error-card { padding: 30px 20px; }
 }

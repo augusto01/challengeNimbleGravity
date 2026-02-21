@@ -1,0 +1,91 @@
+.main-footer {
+  width: 100%;
+  padding: 20px 0;
+  background-color: var(--bg);
+  border-top: 1px solid var(--border);
+  margin-top: 60px;
+}
+
+.footer-container {
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.footer-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Estilos de Contacto */
+.contact-links {
+  gap: 24px;
+}
+
+.contact-item {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  transition: color 0.2s ease;
+}
+
+.contact-item:hover {
+  color: var(--accent); /* Tu verde neón #2ecc71 */
+}
+
+/* Etiquetas técnicas */
+.tech-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--accent);
+  border: 1px solid rgba(46, 204, 113, 0.2);
+  padding: 4px 10px;
+  border-radius: 2px;
+  background: rgba(46, 204, 113, 0.05);
+}
+
+.main-footer {
+  background-color: #1a0f26; /* Un tono aún más oscuro para el cierre */
+  padding: 30px 40px;
+}
+
+.tech-badge {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.footer-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: #e68a0b;
+}
+
+.footer-value {
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 1000px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 25px;
+    padding: 40px 20px;
+  }
+  
+  .contact-links {
+    order: 1;
+  }
+  
+  .tech-stack {
+    order: 2;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
