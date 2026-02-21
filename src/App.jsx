@@ -90,7 +90,7 @@ function App() {
               // Pasamos todos los identificadores del candidato recuperados en el Step 2
               candidateId={candidate?.candidateId}
               uuid={candidate?.uuid}
-              applicationId={candidate?.applicationId} // <--- CAMBIO CLAVE PARA EL STEP 5
+              applicationId={candidate?.applicationId} 
               repoUrlBase={DEFAULT_REPO}
             />
           ))}

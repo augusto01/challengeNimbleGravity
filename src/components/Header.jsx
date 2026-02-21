@@ -17,7 +17,7 @@ const Header = ({ candidate }) => {
             <span className="value">{candidate?.firstName} {candidate?.lastName}</span>
           </div>
           <div className="nav-info">
-            <span className="label">ENDPOINT:</span>
+            <span className="label">EMAIL:</span>
             <span className="value">{candidate?.email}</span>
           </div>
         </div>
